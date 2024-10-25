@@ -24,14 +24,13 @@ const FilmsList: FC<FilmsListProps> = ({
   const handlePageClick = (event: any) => {
     const newOffset = (event.selected * itemsPerPage) % films.length;
     setItemOffset(newOffset);
-    console.log('v', event);
     onPageClick(event.selected + 1);
   };
 
   return (
     <>
       <section className={styles.filmsListContainer}>
-        {films.map((film) => (
+        {currentFilms.map((film) => (
           <FilmCard key={film.imdbID} film={film} />
         ))}
       </section>
