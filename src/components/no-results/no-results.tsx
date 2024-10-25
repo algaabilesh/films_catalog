@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import styles from "./no-results.module.css";
 
 const NoResults: FC = () => {
