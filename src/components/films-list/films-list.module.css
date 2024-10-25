@@ -1,0 +1,57 @@
+.filmsListContainer {
+    padding: 56px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    column-gap: 48px;
+
+    @media(max-width: 599px) { 
+        padding: inherit;
+        justify-content: center;
+    }
+}
+
+/* this styles referenced from example of react-paginate repo:
+ https://github.com/AdeleD/react-paginate/blob/master/theme/basic/react-paginate.css */
+ .reactPaginate {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    gap: 4px;
+    justify-content: center;
+
+    @media(max-width: 599px) { 
+        flex-direction: column;
+        align-items: center;
+    }
+ 
+    li a {
+        border-radius: 7px;
+        padding: 0.1rem 1rem;
+        border: gray 1px solid;
+        cursor: pointer;
+    }
+    
+    li[class~=selected] a {
+        background-color: #0366d6;
+        border-color: transparent;
+        color: white;
+        min-width: 32px;
+    }
+
+    li[class~=previous] a,
+    li[class~=next] a,
+    li[class~=break] a {
+        border-color: transparent;
+    }
+
+    li[class~=disabled] a {
+        color: grey;
+    }
+
+    li[class~=disable],
+    li[class~=disabled] a {
+        cursor: default;
+    }
+}

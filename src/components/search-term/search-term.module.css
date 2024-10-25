@@ -1,0 +1,11 @@
+.searchTermContainer {
+    font-size: 22px;
+
+    @media(max-width: 599px) { 
+        font-size: 16px;
+    }
+}
+
+.searchTerm {
+    text-decoration: underline;
+}

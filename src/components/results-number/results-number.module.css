@@ -1,0 +1,14 @@
+.resultsNumberContainer {
+    width: 96px;
+    height: 30px;
+    background: #6627FF;
+    border-radius: 5px;
+    text-align: center;    
+}
+
+.resultsNumber {
+    color: #fff;
+    margin: 0 auto;
+    line-height: 30px;
+    font-size: 14px;
+}

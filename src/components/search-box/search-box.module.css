@@ -1,0 +1,36 @@
+.searchBox {
+    border: 1px solid #E6EAF5;
+    border-radius: 5px;
+    width: 280px;
+    height: 40px;
+    display: flex;
+
+    @media(max-width: 350px) { 
+        width: 100%;
+    }
+    
+    form {
+        display: flex;
+        height: 100%;    
+    }
+
+    input { 
+        width: 100%;
+        border: none;
+        outline: none;
+        padding: 16px 12px;
+        background-color: #FCFCFF;
+    }
+}
+
+.searchButton {
+    outline: none;
+    border: none;
+    background-color: #FCFCFF;
+    padding-right: 16px;
+}
+
+.searchImage {
+   
+}
+

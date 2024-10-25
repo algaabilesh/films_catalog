@@ -1,0 +1,34 @@
+.cardContainer {
+    margin-bottom: 36px;
+}
+
+.filmAvatar {
+    width: 245px;
+    height: 270px;
+    border: 1px solid #6627FF;
+    border-radius: 10px;
+
+    @media(max-width: 280px) { 
+        width: 100%;
+    }
+}
+
+.filmInfo {
+    margin-top: 24px;
+    max-width: 250px;
+    
+    dt {
+        float: left; 
+        clear: left; 
+    }
+
+    dt::after { 
+        content: ": "; 
+    } 
+    
+
+    dd { 
+        margin: 0 0 0 60px; 
+        padding: 0 0 4px 0; 
+    } 
+}
