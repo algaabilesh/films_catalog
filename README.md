@@ -1,46 +1,73 @@
-# Getting Started with Create React App
+# Films List Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
 
-## Available Scripts
+This project was bootstrapped with Create React App. This README was generated with the help of ChatGPT.
 
-In the project directory, you can run:
+## Prerequisites
 
-### `npm start`
+Before running this project, ensure you have the following installed:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Node.js: This project requires Node.js version 14 or later. You can download Node.js from the [official website](https://nodejs.org/). To check your Node.js version, run the following command in your terminal:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```bash
+node -v
+```
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+First step is clone the repository and install the dependencies:
 
-### `npm run build`
+```bash
+git clone https://github.com/<your-github-url>/films_catalog.git
+cd films_catalog
+npm install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Running the project
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To run the project:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm start
+```
 
-### `npm run eject`
+Then, open http://localhost:3000 in the browser to see the result.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Building the Project
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To build the project for deployment:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+npm run build
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Trade-offs and Reasoning
 
-## Learn More
+Given the constraints and goals of this test project, several important decisions were made:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### Absence of state manager
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This project is a small-scale test application that currently utilizes React's built-in state management and prop drilling to pass data through the component hierarchy. While this approach is sufficient for the project's current scope, introducing a state management library such as Redux or Context API could enhance maintainability and scalability in the future. These tools would help manage state more centrally and reduce the complexity associated with prop drilling, making the application more robust as it grows, but for now it is not mandatory.
+
+#### CSS Methodologies
+
+This project doesn't use any CSS methodologies like BEM to organize styles. Although the current CSS setup might serve smaller projects, using a methodology like BEM could increase maintainability as the project grows.
+
+
+#### Accessibility
+
+Accessibility options, such as aria-label attributes and roles, are currently not implemented. This is certainly a limitation of the site, and full accessibility support is a goal for future development.
+
+It should be noted that this project was a testing app, and the decisions made reflect that.
+
+## Future Improvements
+
+Currently, the application faces an issue where searching for a term again while on a different page does not automatically reset to the first page. This could be optimized by caching the search results for each page, thus avoiding redundant requests and fetching data from the cache instead. Additionally, incorporating the current page number as a URL parameter would enhance user experience by allowing the sharing of URLs that preserve search context, though this was not an initial requirement. Future thorough testing might reveal more areas for improvement, enhancing the application’s performance and user interaction capabilities.
+Also, the code implements very simple error handling that just logs the error stack trace and there is no proper handling on UI side, however it was not requirement.
+
+
+## References
+
+The project was referenced by some code from react-paginate package (https://www.npmjs.com/package/react-paginate). Specifically the styles are taken from https://github.com/AdeleD/react-paginate/blob/master/theme/basic/react-paginate.css
+
